@@ -15,6 +15,8 @@ main{
 main > div{
   width: 30%;
   min-width: 250px;
+  border-radius: 5px;
+  box-shadow: 0 0 4px #adadad;
 }
 h1, h2 {
   font-family: Helvetica;
@@ -46,7 +48,7 @@ input[type="datetime-local"], input[type="email"],
 input[type="month"], input[type="number"],
 input[type="password"], input[type="search"],
 input[type="tel"], input[type="time"],
-input[type="url"]
+input[type="url"], textarea
 {
   border-radius: 5px;
   border: 1px solid #9d9d9d;
@@ -55,16 +57,20 @@ input[type="url"]
 }
 input {
   max-width: 70%;
+  margin: 5px 0 10px;
 }
 input[type="submit"], input[type="reset"]{
+  display: inline-block;
   width: 80px;
   max-width: 100%;
   margin: 5px 0;
+  margin-left: auto;
   height: 25px;
   border-radius: 5px;
   border: 1px solid #9d9d9d;
 }
 textarea{
+  height: auto;
   max-width: 100%;
   min-height: 100px;
   max-height: 300px;
@@ -75,4 +81,13 @@ form > button[type="submit"] {
   height: 25px;
   width: 120px;
   margin: 20px 0;
+}
+.refs > form > p {
+  display: flex;
+  justify-content: space-between;
+}
+.refs > form > p > label {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
 }
