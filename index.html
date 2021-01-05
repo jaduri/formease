@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Create HTML forms with ease">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/main.css"/>
+    <title>Formease</title>
+  </head>
+  <body>
+    <header>
+      <h1>Hello Formease!</h1>
+      <h2>Welcome Coders &#128513</h2>
+      <p>Creating html forms is a breeze with formease</p>
+      <p>For now, kindly copy the html from dev tools &#128517 </p>
+    </header>
+    <main>
+      <form action="/register" method="POST" id="primary-form">
+        <label for="type">Type of field</label>
+        <input type="text" name="type">
+        <label for="name">Field Name</label>
+        <input type="text" name="name">
+        <label for="label">Field Label</label>
+        <input type="text" name="label">
+        <button type="submit">add</button>
+      </form>
+      <div id="root">
+
+      </div>
+    </main>
+    <footer>
+
+    </footer>
+
+  </body>
+  <script type="module" src="/src/main.js">
+
+  </script>
+</html>

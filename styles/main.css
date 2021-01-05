@@ -1,0 +1,47 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  min-width: 200px;
+  max-width: 300px;
+}
+form > label{
+  margin: 5px;
+}
+input[type="text"], input[type="date"],
+input[type="datetime-local"], input[type="email"],
+input[type="month"], input[type="number"],
+input[type="password"], input[type="search"],
+input[type="tel"], input[type="time"],
+input[type="url"]
+{
+  border-radius: 5px;
+  border: 1px solid #9d9d9d;
+  height: 25px;
+  max-width: 70%;
+}
+input {
+  max-width: 70%;
+}
+input[type="submit"], input[type="reset"]{
+  width: 80px;
+  max-width: 100%;
+  margin: 5px 0;
+  height: 25px;
+  border-radius: 5px;
+  border: 1px solid #9d9d9d;
+}
+form > button[type="submit"] {
+  border-radius: 5px;
+  border: 1px solid #9d9d9d;
+  height: 25px;
+  width: 120px;
+  margin: 20px 0;
+}

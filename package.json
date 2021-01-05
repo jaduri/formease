@@ -1,0 +1,19 @@
+{
+  "name": "formease",
+  "version": "1.0.0",
+  "description": "Front end module for generating custom html forms",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "serve"
+  },
+  "keywords": [
+    "form",
+    "html-form"
+  ],
+  "author": "T.J. ADUWARI",
+  "license": "ISC",
+  "dependencies": {
+    "serve": "^11.3.2"
+  }
+}
