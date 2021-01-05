@@ -5,12 +5,38 @@ html {
 * {
   box-sizing: border-box;
 }
+body{
+  font-family: "Trebuchet MS", sans-serif;
+}
+main{
+  display: flex;
+  justify-content: space-evenly;
+}
+main > div{
+  width: 30%;
+  min-width: 250px;
+}
+h1, h2 {
+  font-family: Helvetica;
+}
+h3 {
+  text-align: center;
+}
+p{
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+header{
+  margin-left: 5vw;
+}
+
 form{
   display: flex;
   flex-direction: column;
   width: 80%;
   min-width: 200px;
-  max-width: 300px;
+  max-width: 350px;
+  margin: auto;
 }
 form > label{
   margin: 5px;
@@ -25,7 +51,7 @@ input[type="url"]
   border-radius: 5px;
   border: 1px solid #9d9d9d;
   height: 25px;
-  max-width: 70%;
+  max-width: 90%;
 }
 input {
   max-width: 70%;
@@ -37,6 +63,11 @@ input[type="submit"], input[type="reset"]{
   height: 25px;
   border-radius: 5px;
   border: 1px solid #9d9d9d;
+}
+textarea{
+  max-width: 100%;
+  min-height: 100px;
+  max-height: 300px;
 }
 form > button[type="submit"] {
   border-radius: 5px;

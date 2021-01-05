@@ -19,6 +19,15 @@ class Input{
       case "radio":
         input = `<label for="${this.name}"><input type="${this.type}" name="${this.name}"/> ${this.label}</label>`
         break;
+      case "textarea":
+        input = `<label for="${this.name}">${this.label}</label>
+        <textarea name="${this.name}"></textarea>`
+        break;
+      // case "select":
+      //   input = `<label for="${this.name}">${this.label}<select name="${this.name}">
+      //   <option value="option1">Option1</option>
+      //   </select></label>`
+      //   break;
       default:
         input = `<label for="${this.name}">${this.label}</label>
         <input type="${this.type}" name="${this.name}"/>`
