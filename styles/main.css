@@ -1,13 +1,7 @@
-html {
-  margin: 0;
-  padding: 0;
-}
-* {
-  box-sizing: border-box;
-}
-body{
+:root {
   font-family: "Trebuchet MS", sans-serif;
 }
+
 main{
   display: flex;
   justify-content: space-evenly;
@@ -28,9 +22,6 @@ p{
   font-family: "Trebuchet MS", sans-serif;
 }
 
-header{
-  margin-left: 5vw;
-}
 
 form{
   display: flex;

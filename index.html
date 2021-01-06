@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <!--Metadata-->
     <meta charset="utf-8">
     <meta name="description" content="Create HTML forms with ease">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS Stylesheets: Reset CSS, Materialize CSS, Main CSS-->
+    <link rel="stylesheet" href="styles/reset.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="./styles/main.css"/>
+    <link rel="stylesheet" href="styles/main.css"/>
+    <!--Title-->
     <title>Formease</title>
   </head>
   <body>
     <header>
-      <h1>Hello Formease!</h1>
+      <nav id="navbar" class="nav-wrapper">
+        <a href="#" class="brand-logo left">Formease</a>
+      </nav>
       <h2>Welcome Coders &#128513;</h2>
       <p>Creating html forms is a breeze with formease</p>
       <p>For now, kindly copy the html from dev tools &#128517; </p>
@@ -85,7 +92,8 @@
             <input type="search" name="search">
           </p>
           <p>
-            <label for="submit">submit<input type="submit" name="submit"></label>
+            <label for="submit">submit</label>
+            <input class="btn" type="submit" name="submit">
           </p>
           <p>
             <label for="tel">tel</label>
@@ -114,7 +122,8 @@
           <input type="text" name="name">
           <label for="label">Field Label</label>
           <input type="text" name="label">
-          <button type="submit">add</button>
+          <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+        
         </form>
       </div>
       <div class="output-form">
@@ -124,10 +133,12 @@
         </div>
       </div>
     </main>
-    <footer>
-
+    <footer class="page-footer">
+        <div class="container">
+          <p>&copy; Formease 2021</p>
+          <br/>
+        </div>
     </footer>
-
   </body>
   <script type="module" src="./src/main.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
