@@ -1,39 +1,53 @@
 :root {
   font-family: "Trebuchet MS", sans-serif;
+  --primary-color: #EE6E73;
 }
 
-main{
+#navbar {
+  padding-bottom: 5px;
+}
+
+#main{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
+  margin: auto;
+  width: 100vw;
+  padding: 1%;
 }
-main > div{
-  width: 30%;
-  min-width: 250px;
+
+#main > div{
   border-radius: 5px;
-  box-shadow: 0 0 4px #adadad;
+  box-shadow: 0 0 1px var(--primary-color);
 }
+
+@media (min-width: 750px){
+  #main > div{
+    width: 30%;
+  }
+}
+
 h1, h2 {
   font-family: Helvetica;
 }
-h3 {
+.form-title {
   text-align: center;
 }
-p{
-  font-family: "Trebuchet MS", sans-serif;
-}
-
 
 form{
-  display: flex;
-  flex-direction: column;
   width: 80%;
-  min-width: 200px;
-  max-width: 350px;
   margin: auto;
+  padding-bottom: 5%;
 }
-form > label{
-  margin: 5px;
+
+.add-button {
+  background-color: var(--primary-color);
 }
+
+#footer {
+  padding: 1%;
+}
+
 input[type="text"], input[type="date"],
 input[type="datetime-local"], input[type="email"],
 input[type="month"], input[type="number"],
@@ -42,7 +56,7 @@ input[type="tel"], input[type="time"],
 input[type="url"], textarea
 {
   border-radius: 5px;
-  border: 1px solid #9d9d9d;
+  border: 1px solid var(--primary-color);
   height: 25px;
   max-width: 90%;
 }
@@ -51,24 +65,17 @@ input {
   margin: 5px 0 10px;
 }
 input[type="submit"], input[type="reset"]{
-  display: inline-block;
-  width: 80px;
-  max-width: 100%;
-  margin: 5px 0;
-  margin-left: auto;
-  height: 25px;
-  border-radius: 5px;
-  border: 1px solid #9d9d9d;
+  text-decoration: none;
+  text-transform: capitalize;
+  background-color: var(--primary-color);
 }
 textarea{
-  height: auto;
   max-width: 100%;
   min-height: 100px;
   max-height: 300px;
 }
 form > button[type="submit"] {
   border-radius: 5px;
-  border: 1px solid #9d9d9d;
   height: 25px;
   width: 120px;
   margin: 20px 0;

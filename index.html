@@ -16,15 +16,17 @@
   <body>
     <header>
       <nav id="navbar" class="nav-wrapper">
-        <a href="#" class="brand-logo left">Formease</a>
+        <a href="#" class="brand-logo">Formease</a>
       </nav>
-      <h2>Welcome Coders &#128513;</h2>
-      <p>Creating html forms is a breeze with formease</p>
-      <p>For now, kindly copy the html from dev tools &#128517; </p>
+      <div class="container">
+        <h2>Welcome Coders &#128513;</h2>
+        <p>Creating html forms is a breeze with formease</p>
+        <p>For now, kindly copy the html from dev tools &#128517;</p>
+      </div>
     </header>
-    <main>
-      <div class="refs">
-        <h3>Sample input types</h3>
+    <main id="main">
+      <div class="container refs">
+        <h3 class="form-title">Sample input types</h3>
         <form >
           <p>
             <label for="name">text</label>
@@ -84,7 +86,7 @@
           </p>
           <p>
             <label for="reset">reset
-              <input type="reset" name="reset">
+              <input class="btn" type="reset" name="reset">
             </label>
           </p>
           <p>
@@ -113,8 +115,8 @@
           </p>
         </form>
       </div>
-      <div class="primary-form-container">
-        <h3>Generator form</h3>
+      <div class="container primary-form-container">
+        <h3 class="form-title">Generator form</h3>
         <form action="/register" method="POST" id="primary-form">
           <label for="type">Field type</label>
           <input type="text" name="type">
@@ -122,22 +124,19 @@
           <input type="text" name="name">
           <label for="label">Field Label</label>
           <input type="text" name="label">
-          <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+          <a class="btn-floating"><i class="add-button material-icons">add</i></a>
         
         </form>
       </div>
-      <div class="output-form">
-        <h3>Your form</h3>
+      <div class="container output-form">
+        <h3 class="form-title">Your form</h3>
         <div id="root">
 
         </div>
       </div>
     </main>
-    <footer class="page-footer">
-        <div class="container">
-          <p>&copy; Formease 2021</p>
-          <br/>
-        </div>
+    <footer id="footer" class="page-footer">
+        <p>&copy; Formease 2021</p>
     </footer>
   </body>
   <script type="module" src="./src/main.js"></script>
