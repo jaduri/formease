@@ -1,10 +1,11 @@
 :root {
   font-family: "Trebuchet MS", sans-serif;
-  --primary-color: #EE6E73;
+  --primary-color: #26A69A;
 }
 
 #navbar {
   padding-bottom: 5px;
+  background-color: var(--primary-color);
 }
 
 #main{
@@ -30,6 +31,7 @@
 
 .form-title {
   text-align: center;
+  font-size: larger;
 }
 
 form{
@@ -43,6 +45,7 @@ form{
 }
 
 #footer {
+  background-color: var(--primary-color);
   padding: 1%;
 }
 
@@ -55,11 +58,8 @@ input[type="url"], textarea
 {
   border-radius: 5px;
   border: 1px solid var(--primary-color);
-  height: 25px;
-  max-width: 100%;
 }
 input {
-  max-width: 70%;
   margin: 5px 0 10px;
 }
 input[type="submit"], input[type="reset"]{
@@ -71,12 +71,7 @@ textarea{
   min-width: 100%;
   min-height: 100px;
 }
-form > button[type="submit"] {
-  border-radius: 5px;
-  height: 25px;
-  width: 120px;
-  margin: 20px 0;
-}
+
 .refs > form > p {
   display: flex;
   flex-wrap: wrap;

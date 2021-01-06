@@ -18,27 +18,31 @@
       <nav id="navbar" class="nav-wrapper">
         <a href="#" class="brand-logo">Formease</a>
       </nav>
-      <div class="container">
+      <div id="welcome" class="container">
         <h2>Welcome Coders &#128513;</h2>
-        <p>Creating html forms is a breeze with formease</p>
-        <p>For now, kindly copy the html from dev tools &#128517;</p>
+        <p class="flow-text">Creating html forms is a breeze with formease</p>
+        <p class="flow-text">For now, kindly copy the html from dev tools &#128517;</p>
       </div>
     </header>
     <main id="main">
-      <div class="container refs">
+      <div id="reference-form" class="container refs">
         <h3 class="form-title">Sample input types</h3>
         <form >
-          <p>
-            <label for="name">text</label>
-            <input type="text" name="name">
-          </p>
-          <p>
-            <label for="pricerange">range</label>
-            <input type="range" name="pricerange">
-          </p>
-          <p>
-            <label for="terms"><input type="checkbox" name="terms">checkbox</label>
-          </p>
+            <label for="name">
+              <span>text</span>
+              <input type="text" name="name"/>
+            </label>
+
+            <label for="pricerange">
+              <span>range</span>
+              <input type="range" name="pricerange"/>
+            </label>
+            
+            <label for="terms">
+              <span>checkbox</span>
+              <input type="checkbox" name="terms"/>
+            </label>
+
           <p>
             <label for="color">color</label>
             <input type="color" name="color">
