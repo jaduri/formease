@@ -83,7 +83,7 @@ button{
   width: 40%;
   max-width: 400px;
   border-radius: 5px;
-  box-shadow: 0 0 8px #dadada;
+  box-shadow: 0 0 10px #dadada;
   margin-bottom: 20px;
 }
 #main p{
@@ -204,6 +204,12 @@ form > button[type="submit"] {
 .show-note{
   opacity: 1;
   top: 100px;
+}
+
+/*------------------Media Queries------------------*/
+footer > p{
+  color: #6d6d6d;
+  text-align: center;
 }
 
 /*------------------Media Queries------------------*/
