@@ -8,16 +8,46 @@ html {
 body{
   font-family: "Trebuchet MS", sans-serif;
 }
-main{
+
+#header{
+  width: 100vw;
+}
+
+#navbar {
+  background-color: black;
+  margin: auto;
+  width: 100%;
+  padding: 1vh;
+  top: 0;
+}
+
+#brand-name {
+  text-decoration: none;
+  color: #adadad;
+}
+
+#welcome {
+  margin: auto;
+  width: 95%;
+}
+
+#main{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
 }
-main > div{
-  width: 30%;
-  min-width: 250px;
+#main > div{
+  width: 90%;
   border-radius: 5px;
   box-shadow: 0 0 4px #adadad;
 }
+
+@media (min-width: 768px) {
+  #main > div{
+    width: 30%;
+  }
+}
+
 h1, h2 {
   font-family: Helvetica;
 }
@@ -28,16 +58,10 @@ p{
   font-family: "Trebuchet MS", sans-serif;
 }
 
-header{
-  margin-left: 5vw;
-}
-
 form{
   display: flex;
   flex-direction: column;
   width: 80%;
-  min-width: 200px;
-  max-width: 350px;
   margin: auto;
 }
 form > label{
@@ -56,8 +80,8 @@ input[type="url"], textarea
   max-width: 90%;
 }
 input {
-  max-width: 70%;
-  margin: 5px 0 10px;
+  max-width: 90%;
+  margin: 5px 0 5px;
 }
 input[type="submit"], input[type="reset"]{
   display: inline-block;
@@ -71,9 +95,8 @@ input[type="submit"], input[type="reset"]{
 }
 textarea{
   height: auto;
-  max-width: 100%;
+  min-width: 100%;
   min-height: 100px;
-  max-height: 300px;
 }
 form > button[type="submit"] {
   border-radius: 5px;
@@ -84,10 +107,12 @@ form > button[type="submit"] {
 }
 .refs > form > p {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 .refs > form > p > label {
   display: flex;
+  flex-wrap: wrap;
   flex-grow: 1;
   justify-content: space-between;
 }

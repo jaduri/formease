@@ -1,34 +1,45 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <!--Metadata-->
     <meta charset="utf-8">
     <meta name="description" content="Create HTML forms with ease">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/main.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css"/>
+    <!--Title-->
     <title>Formease</title>
   </head>
   <body>
-    <header>
-      <h1>Hello Formease!</h1>
-      <h2>Welcome Coders &#128513;</h2>
-      <p>Creating html forms is a breeze with formease</p>
-      <p>For now, kindly copy the html from dev tools &#128517; </p>
+    <header id="header">
+      <nav id="navbar">
+        <a id="brand-name" href="#">Formease</a>
+      </nav>
+      <div id="welcome">
+        <h2>Welcome Coders &#128513;</h2>
+        <p class="flow-text">Creating html forms is a breeze with formease</p>
+        <p class="flow-text">For now, kindly copy the html from dev tools &#128517;</p>
+      </div>
     </header>
-    <main>
-      <div class="refs">
-        <h3>Sample input types</h3>
-        <form >
-          <p>
-            <label for="name">text</label>
-            <input type="text" name="name">
-          </p>
-          <p>
-            <label for="pricerange">range</label>
-            <input type="range" name="pricerange">
-          </p>
-          <p>
-            <label for="terms"><input type="checkbox" name="terms">checkbox</label>
-          </p>
+    <main id="main">
+      <div id="reference-form" class="refs">
+        <h3 class="form-title">Sample input types</h3>
+        <form>
+            <label for="name">
+              <span>text</span>
+              <input type="text" name="name"/>
+            </label>
+
+            <label for="pricerange">
+              <span>range</span>
+              <input type="range" name="pricerange"/>
+            </label>
+
+            <label for="terms">
+              <span>checkbox</span>
+              <input type="checkbox" name="terms"/>
+            </label>
+
           <p>
             <label for="color">color</label>
             <input type="color" name="color">
@@ -76,7 +87,7 @@
           </p>
           <p>
             <label for="reset">reset
-              <input type="reset" name="reset">
+              <input class="btn" type="reset" name="reset">
             </label>
           </p>
           <p>
@@ -84,7 +95,8 @@
             <input type="search" name="search">
           </p>
           <p>
-            <label for="submit">submit<input type="submit" name="submit"></label>
+            <label for="submit">submit</label>
+            <input class="btn" type="submit" name="submit">
           </p>
           <p>
             <label for="tel">tel</label>
@@ -105,7 +117,7 @@
         </form>
       </div>
       <div class="primary-form-container">
-        <h3>Generator form</h3>
+        <h3 class="form-title">Generator form</h3>
         <form action="/register" method="POST" id="primary-form">
           <label for="type">Field type</label>
           <input type="text" name="type">
@@ -113,22 +125,17 @@
           <input type="text" name="name">
           <label for="label">Field Label</label>
           <input type="text" name="label">
-          <button type="submit">add</button>
+          <a id="add-button"><i class="material-icons">add</i></a>
+        
         </form>
       </div>
       <div class="output-form">
-        <h3>Your form</h3>
+        <h3 class="form-title">Your form</h3>
         <div id="root">
 
         </div>
       </div>
     </main>
-    <footer>
-
-    </footer>
-
   </body>
-  <script type="module" src="./src/main.js">
-
-  </script>
+  <script type="module" src="./src/main.js"></script>
 </html>
