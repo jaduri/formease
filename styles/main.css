@@ -1,54 +1,72 @@
-:root {
+html {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+body{
   font-family: "Trebuchet MS", sans-serif;
-  --primary-color: #26A69A;
+}
+
+#header{
+  width: 100vw;
 }
 
 #navbar {
-  padding-bottom: 5px;
-  background-color: var(--primary-color);
+  background-color: black;
+  margin: auto;
+  width: 100%;
+  padding: 1vh;
+  top: 0;
+}
+
+#brand-name {
+  text-decoration: none;
+  color: #adadad;
+}
+
+#welcome {
+  margin: auto;
+  width: 95%;
 }
 
 #main{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin: auto;
-  width: 100vw;
-  padding: 1%;
 }
-
 #main > div{
+  width: 90%;
   border-radius: 5px;
-  margin: 1%;
-  box-shadow: 0 0 1px var(--primary-color);
+  box-shadow: 0 0 4px #adadad;
 }
 
-@media (min-width: 750px){
+@media (min-width: 768px) {
   #main > div{
     width: 30%;
   }
 }
 
-.form-title {
+h1, h2 {
+  font-family: Helvetica;
+}
+h3 {
   text-align: center;
-  font-size: larger;
+}
+p{
+  font-family: "Trebuchet MS", sans-serif;
 }
 
 form{
+  display: flex;
+  flex-direction: column;
   width: 80%;
   margin: auto;
-  padding-bottom: 5%;
 }
-
-.add-button {
-  background-color: var(--primary-color);
+form > label{
+  margin: 5px;
 }
-
-#footer {
-  background-color: var(--primary-color);
-  padding: 1%;
-}
-
 input[type="text"], input[type="date"],
 input[type="datetime-local"], input[type="email"],
 input[type="month"], input[type="number"],
@@ -57,21 +75,36 @@ input[type="tel"], input[type="time"],
 input[type="url"], textarea
 {
   border-radius: 5px;
-  border: 1px solid var(--primary-color);
+  border: 1px solid #9d9d9d;
+  height: 25px;
+  max-width: 90%;
 }
 input {
-  margin: 5px 0 10px;
+  max-width: 90%;
+  margin: 5px 0 5px;
 }
 input[type="submit"], input[type="reset"]{
-  text-decoration: none;
-  text-transform: capitalize;
-  background-color: var(--primary-color);
+  display: inline-block;
+  width: 80px;
+  max-width: 100%;
+  margin: 5px 0;
+  margin-left: auto;
+  height: 25px;
+  border-radius: 5px;
+  border: 1px solid #9d9d9d;
 }
 textarea{
+  height: auto;
   min-width: 100%;
   min-height: 100px;
 }
-
+form > button[type="submit"] {
+  border-radius: 5px;
+  border: 1px solid #9d9d9d;
+  height: 25px;
+  width: 120px;
+  margin: 20px 0;
+}
 .refs > form > p {
   display: flex;
   flex-wrap: wrap;

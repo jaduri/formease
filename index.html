@@ -5,29 +5,26 @@
     <meta charset="utf-8">
     <meta name="description" content="Create HTML forms with ease">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--CSS Stylesheets: Reset CSS, Materialize CSS, Main CSS-->
-    <link rel="stylesheet" href="styles/reset.css"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="styles/main.css"/>
     <!--Title-->
     <title>Formease</title>
   </head>
   <body>
-    <header>
-      <nav id="navbar" class="nav-wrapper">
-        <a href="#" class="brand-logo">Formease</a>
+    <header id="header">
+      <nav id="navbar">
+        <a id="brand-name" href="#">Formease</a>
       </nav>
-      <div id="welcome" class="container">
+      <div id="welcome">
         <h2>Welcome Coders &#128513;</h2>
         <p class="flow-text">Creating html forms is a breeze with formease</p>
         <p class="flow-text">For now, kindly copy the html from dev tools &#128517;</p>
       </div>
     </header>
     <main id="main">
-      <div id="reference-form" class="container refs">
+      <div id="reference-form" class="refs">
         <h3 class="form-title">Sample input types</h3>
-        <form >
+        <form>
             <label for="name">
               <span>text</span>
               <input type="text" name="name"/>
@@ -119,7 +116,7 @@
           </p>
         </form>
       </div>
-      <div class="container primary-form-container">
+      <div class="primary-form-container">
         <h3 class="form-title">Generator form</h3>
         <form action="/register" method="POST" id="primary-form">
           <label for="type">Field type</label>
@@ -128,21 +125,17 @@
           <input type="text" name="name">
           <label for="label">Field Label</label>
           <input type="text" name="label">
-          <a class="btn-floating"><i class="add-button material-icons">add</i></a>
+          <a id="add-button"><i class="material-icons">add</i></a>
         
         </form>
       </div>
-      <div class="container output-form">
+      <div class="output-form">
         <h3 class="form-title">Your form</h3>
         <div id="root">
 
         </div>
       </div>
     </main>
-    <footer id="footer" class="page-footer">
-        <p>&copy; Formease 2021</p>
-    </footer>
   </body>
   <script type="module" src="./src/main.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </html>
