@@ -13,127 +13,102 @@
   <body>
     <header id="header">
       <nav id="navbar">
-        <a id="brand-name" href="#">Formease</a>
+        <h1><a id="brand-name" href="#">Formease</a></h1>
       </nav>
       <div id="welcome">
         <h2>Welcome Coders &#128513;</h2>
         <p class="flow-text">Creating html forms is a breeze with formease</p>
-        <p class="flow-text">For now, kindly copy the html from dev tools &#128517;</p>
       </div>
+      <p class="note" id="notification"></p>
     </header>
     <main id="main">
       <div id="reference-form" class="refs">
-        <h3 class="form-title">Sample input types</h3>
-        <form>
-            <label for="name">
-              <span>text</span>
-              <input type="text" name="name"/>
-            </label>
-
-            <label for="pricerange">
-              <span>range</span>
-              <input type="range" name="pricerange"/>
-            </label>
-
-            <label for="terms">
-              <span>checkbox</span>
-              <input type="checkbox" name="terms"/>
-            </label>
-
+        <h3 class="form-title">Sample forms</h3>
+        <form class="login-form" action="/login" method="post">
+          <h4>Sample login form</h4>
           <p>
-            <label for="color">color</label>
-            <input type="color" name="color">
-          </p>
-          <p>
-            <label for="date">date</label>
-            <input type="date" name="date">
-          </p>
-          <p>
-            <label for="datetime">datetime</label>
-            <input type="datetime-local" name="datetime">
-          </p>
-          <p>
-            <label for="email">email</label>
-            <input type="email" name="email">
-          </p>
-          <p>
-            <label for="file">file</label>
-            <input type="file" name="file">
-          </p>
-          <p>
-            <label for="hidden">hidden</label>
-            <input type="hidden" name="hidden">
-          </p>
-          <p>
-            <label for="image">image</label>
-            <input type="image" name="image">
-          </p>
-          <p>
-            <label for="month">month</label>
-            <input type="month" name="month">
-          </p>
-          <p>
-            <label for="number">number</label>
-            <input type="number" name="number">
+            <label for="username">username</label>
+            <input type="text" name="username"/>
           </p>
           <p>
             <label for="password">password</label>
             <input type="password" name="password">
           </p>
           <p>
-            <label for="options"><input type="radio" name="options"> radio</label>
-            <label for="options"><input type="radio" name="options"> radio</label>
-            <label for="options"><input type="radio" name="options"> radio</label>
+            <input type="submit" name="submit">
+          </p>
+        </form>
+
+        <form class="survey-form" action="/survey" method="post">
+          <h4>Sample survey form</h4>
+          <p>
+            <label for="name">Name</label>
+            <input type="text" name="name"/>
           </p>
           <p>
-            <label for="reset">reset
-              <input class="btn" type="reset" name="reset">
-            </label>
+            <label for="email">email</label>
+            <input type="email" name="email">
           </p>
           <p>
-            <label for="search">search</label>
-            <input type="search" name="search">
+            <label for="industry">Industry</label>
+            <input type="text" name="industry"/>
           </p>
           <p>
-            <label for="submit">submit</label>
-            <input class="btn" type="submit" name="submit">
+            <label for="date-of-birth">D.O.B</label>
+            <input type="date" name="date-of-birth">
           </p>
           <p>
-            <label for="tel">tel</label>
-            <input type="tel" name="tel">
+            <label for="comment">Comment</label>
+            <textarea name="comment" rows="8" cols="40">
+            </textarea>
           </p>
           <p>
-            <label for="time">time</label>
-            <input type="time" name="time">
-          </p>
-          <p>
-            <label for="url">url</label>
-            <input type="url" name="url">
-          </p>
-          <p>
-            <label for="textarea"></label>
-            <textarea name="name" rows="8" cols="30"></textarea>
+            <input type="submit" name="submit">
           </p>
         </form>
       </div>
       <div class="primary-form-container">
-        <h3 class="form-title">Generator form</h3>
+        <h3 class="form-title">Add form field below</h3>
         <form action="/register" method="POST" id="primary-form">
-          <label for="type">Field type</label>
-          <input type="text" name="type">
+          <label for="type">Field Type</label>
+          <select name="field-type">
+            <option value="text">text</option>
+            <option value="textarea">textarea</option>
+            <option value="range">range</option>
+            <option value="checkbox">checkbox</option>
+            <option value="color">color</option>
+            <option value="date">date</option>
+            <option value="datetime">datetime</option>
+            <option value="email">email</option>
+            <option value="file">file</option>
+            <option value="hidden">hidden</option>
+            <option value="image">image</option>
+            <option value="month">month</option>
+            <option value="number">number</option>
+            <option value="password">password</option>
+            <option value="radio">radio</option>
+            <option value="reset">reset</option>
+            <option value="search">search</option>
+            <option value="submit">submit</option>
+            <option value="tel">tel</option>
+            <option value="time">time</option>
+            <option value="url">url</option>
+          </select>
           <label for="name">Field Name</label>
           <input type="text" name="name">
           <label for="label">Field Label</label>
           <input type="text" name="label">
-          <a id="add-button"><i class="material-icons">add</i></a>
-        
+          <button id="add-button" class="flex-centered animated-button" type="submit">
+            <img src="icons/plus.svg" alt="add icon" height="15px" width="15px">
+          </button>
         </form>
       </div>
       <div class="output-form">
-        <h3 class="form-title">Your form</h3>
-        <div id="root">
-
-        </div>
+        <h3 class="form-title">
+          <span>Your form</span>
+          <button type="button" class="animated-button" id="copy-button">COPY</button>
+        </h3>
+        <div id="root"></div>
       </div>
     </main>
   </body>

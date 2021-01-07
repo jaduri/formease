@@ -1,53 +1,17 @@
-html {
-  margin: 0;
-  padding: 0;
+:root{
+  --blue: #16a085;
 }
+/*------------------Universal styles------------------*/
 * {
   box-sizing: border-box;
 }
-body{
+html, body {
+  margin: 0;
+  padding: 0;
+}
+body {
   font-family: "Trebuchet MS", sans-serif;
 }
-
-#header{
-  width: 100vw;
-}
-
-#navbar {
-  background-color: black;
-  margin: auto;
-  width: 100%;
-  padding: 1vh;
-  top: 0;
-}
-
-#brand-name {
-  text-decoration: none;
-  color: #adadad;
-}
-
-#welcome {
-  margin: auto;
-  width: 95%;
-}
-
-#main{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-#main > div{
-  width: 90%;
-  border-radius: 5px;
-  box-shadow: 0 0 4px #adadad;
-}
-
-@media (min-width: 768px) {
-  #main > div{
-    width: 30%;
-  }
-}
-
 h1, h2 {
   font-family: Helvetica;
 }
@@ -57,11 +21,84 @@ h3 {
 p{
   font-family: "Trebuchet MS", sans-serif;
 }
+button{
+  border: none;
+  outline: none;
+}
 
+/*------------------Header styles------------------*/
+
+#header{
+  width: 100%;
+}
+
+#navbar {
+  background-color: var(--blue);
+  margin: auto;
+  width: 100%;
+  padding: 1vh;
+  top: 0;
+}
+#navbar::after{
+  content: "";
+  background: linear-gradient(#ffffff00, #ffffff99);
+  height: 100%;
+  width: 100%;
+}
+#navbar > h1{
+  margin: 10px 0;
+  margin-left: 2%;
+}
+
+#brand-name {
+  text-decoration: none;
+  color: #fff;
+}
+
+#welcome {
+  margin: auto;
+  width: 95%;
+}
+.note{
+  border-radius: 5px;
+  background-color: var(--blue);
+  color: #fff;
+  font-size: 19px;
+  opacity: 0;
+  padding: 10px;
+  position: absolute;
+  top: -500px;
+  right: 10px;
+  transition: 0.5s ease-in;
+}
+
+/*------------------Main section styles------------------*/
+
+#main{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+#main > div{
+  width: 40%;
+  max-width: 400px;
+  border-radius: 5px;
+  box-shadow: 0 0 8px #dadada;
+  margin-bottom: 20px;
+}
+#main p{
+  margin: 5px 0;
+}
+.form-title{
+  position: relative;
+}
+
+/*------------------Uniform form element styles------------------*/
 form{
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 85%;
+  max-width: 320px;
   margin: auto;
 }
 form > label{
@@ -72,16 +109,20 @@ input[type="datetime-local"], input[type="email"],
 input[type="month"], input[type="number"],
 input[type="password"], input[type="search"],
 input[type="tel"], input[type="time"],
-input[type="url"], textarea
+input[type="url"], textarea, select
 {
   border-radius: 5px;
   border: 1px solid #9d9d9d;
   height: 25px;
   max-width: 90%;
 }
-input {
+input, select {
   max-width: 90%;
   margin: 5px 0 5px;
+  outline: none;
+}
+input:focus, textarea:focus, select:focus{
+  border: 1px solid var(--blue);
 }
 input[type="submit"], input[type="reset"]{
   display: inline-block;
@@ -105,6 +146,8 @@ form > button[type="submit"] {
   width: 120px;
   margin: 20px 0;
 }
+
+/*------------------Reference form specific styles------------------*/
 .refs > form > p {
   display: flex;
   flex-wrap: wrap;
@@ -113,6 +156,64 @@ form > button[type="submit"] {
 .refs > form > p > label {
   display: flex;
   flex-wrap: wrap;
-  flex-grow: 1;
   justify-content: space-between;
+}
+
+/*------------------Generator form specific styles------------------*/
+#add-button{
+  background-color: var(--blue);
+  border-radius: 50%;
+  border: none;
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: 20px;
+  padding: 0;
+}
+#add-button > img {
+  height: 50%;
+  width: auto;
+}
+
+/*------------------Output form specific styles------------------*/
+#copy-button {
+  background-color: var(--blue);
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 18px;
+  padding: 5px 10px;
+  position: absolute;
+  right: 10px;
+}
+
+/*------------------Utility classes------------------*/
+.flex-centered{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.animated-button{
+  box-shadow: -2px 3px 2px #adadad;
+  transition: 0.1s ease;
+}
+.animated-button:active{
+  box-shadow: 0 0 2px #adadad;
+  transform: scale(0.95);
+}
+.show-note{
+  opacity: 1;
+  top: 100px;
+}
+
+/*------------------Media Queries------------------*/
+@media (max-width: 768px) {
+  #main > div{
+    width: 100%;
+  }
+}
+@media (max-width: 1220px) {
+  #reference-form{
+    display: none;
+  }
 }

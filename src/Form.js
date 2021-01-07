@@ -15,7 +15,7 @@ class Form{
 
   generateForm(){
     this.content = this.fields.reduce((final, current) => {
-      return final += current;
+      return final += current + "\n";
     });
     return `<form action="${this.action}" method="${this.method}">
     ${this.content}<button type="submit">${this.buttonAction}</button>
