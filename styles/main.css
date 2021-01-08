@@ -203,10 +203,10 @@ form > button[type="submit"] {
 }
 .show-note{
   opacity: 1;
-  top: 100px;
+  top: 60px;
 }
 
-/*------------------Media Queries------------------*/
+/*------------------Footer styles------------------*/
 footer > p{
   color: #6d6d6d;
   text-align: center;
