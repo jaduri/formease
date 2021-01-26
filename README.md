@@ -1,4 +1,4 @@
-#Formease
+# Formease
 
 Easily create custom HTML forms and copy the code to your project when complete.
 After coding many HTML forms, the idea of a form generator seemed necessary.
@@ -9,11 +9,11 @@ Try it out.
 
 _The project is new and features will be added frequently_
 
-##USE ONLINE
+## USE ONLINE
 
 The project is hosted on https://jaduri.github.io/formease/
 
-##RUN ON LOCAL MACHINE
+## RUN ON LOCAL MACHINE
 
 clone the repo and cd into the directory
 
