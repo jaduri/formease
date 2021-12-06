@@ -7,8 +7,6 @@ Formease will significantly reduce the amount of time it takes to hand code HTML
 
 Try it out.
 
-_The project is new and features will be added frequently_
-
 ## USE ONLINE
 
 The project is hosted on https://jaduri.github.io/formease/
